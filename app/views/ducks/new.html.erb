@@ -1,1 +1,7 @@
-<h1>Ducks New</h1>
+<h1>Upload your duck</h1>
+<%= simple_form_for @duck do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category%>
+  <%= f.input :description%>
+  <%= f.button :submit %>
+<% end %>

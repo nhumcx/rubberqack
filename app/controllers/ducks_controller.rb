@@ -11,8 +11,9 @@ class DucksController < ApplicationController
 
   def create
     @duck = Duck.new(duck_params)
-    if @duck.save
-      redirect_to duck_path(duck)
+    @duck.user = current_user
+    if @duck.save!
+      redirect_to duck_path(@duck)
     else
       render :new, status: :unprocessable_entity
     end

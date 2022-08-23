@@ -1,4 +1,9 @@
 class BookingsController < ApplicationController
+  def index
+    @bookings = Booking.all
+    # @ducks = Duck.all
+  end
+
   def new
     @duck = Duck.find(params[:duck_id])
     @booking = Booking.new
@@ -8,7 +13,8 @@ class BookingsController < ApplicationController
     @duck = Duck.find(params[:duck_id])
     @booking = Booking.new(booking_params)
     @booking.duck = @duck
-    if @booking.save
+    @booking.user = current_user
+    if @booking.save!
       redirect_to duck_path(@booking.duck)
     else
       render :new, status: :unprocessable_entity

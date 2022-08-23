@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # newly added gems on Aug 22
 gem "devise"
+gem "faker"
 
 ruby "3.1.2"
 
