@@ -9,25 +9,25 @@
 User.destroy_all
 Duck.destroy_all
 
-# User.create!(
-#   email: "nhumo@test.com",
-#   password: "123456789"
-# )
+User.create!(
+  email: "nhumo@test.com",
+  password: "123456789"
+)
 
-# User.create!(
-#   email: "max@test.com",
-#   password: "123456789"
-# )
+User.create!(
+  email: "max@test.com",
+  password: "123456789"
+)
 
-# User.create!(
-#   email: "denis@test.com",
-#   password: "123456789"
-# )
+User.create!(
+  email: "denis@test.com",
+  password: "123456789"
+)
 
-# User.create!(
-#   email: "ej@test.com",
-#   password: "123456789"
-# )
+User.create!(
+  email: "ej@test.com",
+  password: "123456789"
+)
 
 20.times do
   duck = Duck.new(
