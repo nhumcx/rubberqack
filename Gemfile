@@ -4,6 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # newly added gems on Aug 22
 gem "devise"
 gem "faker"
+gem "cloudinary"
+gem "dotenv-rails", groups: [:development, :test]
+
 
 ruby "3.1.2"
 
