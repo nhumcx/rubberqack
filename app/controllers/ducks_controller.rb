@@ -1,0 +1,2 @@
+class DucksController < ApplicationController
+end
