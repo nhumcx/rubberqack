@@ -1,2 +1,2 @@
 <h1><%= @duck.name %></h1>
-<%=  @duck.photo %>
+<%= cl_image_tag @duck.photo.key, height: 300, width: 400, crop: :fill %>

@@ -30,7 +30,7 @@ class DucksController < ApplicationController
   private
 
   def duck_params
-    params.require(:duck).permit(:name, :category, :description)
+    params.require(:duck).permit(:name, :category, :description, :photo)
   end
 
   def set_duck
