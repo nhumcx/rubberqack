@@ -5,9 +5,6 @@ class DucksController < ApplicationController
     @ducks = Duck.all
   end
 
-  def show
-  end
-
   def new
     @duck = Duck.new
   end
@@ -19,6 +16,9 @@ class DucksController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+  end
+
+  def show
   end
 
   def destroy
