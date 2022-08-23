@@ -9,4 +9,9 @@ Rails.application.routes.draw do
     resources :bookings, only: :destroy
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :ducks, only: %i[index show new create] do
+    resources :bookings, only: %i[new create edit update]
+  end
+  resources :ducks, only: :destroy
+  resources :bookings, only: :destroy
 end
