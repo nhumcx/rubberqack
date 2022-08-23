@@ -13,7 +13,7 @@ class DucksController < ApplicationController
   end
 
   def create
-    @duck = Duck.new(duck_pramas)
+    @duck = Duck.new(duck_params)
     if @duck.save
       redirect_to duck_path(duck)
     else
@@ -28,7 +28,7 @@ class DucksController < ApplicationController
 
   private
 
-  def duck_pramas
+  def duck_params
     params.require(:duck).permit(:name, :category, :description)
   end
 
