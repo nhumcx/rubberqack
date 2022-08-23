@@ -1,5 +1,5 @@
 class DucksController < ApplicationController
-  before_action :set_duck only: %i[show new create destroy]
+  before_action :set_duck, only: %i[show destroy]
 
   def index
     @ducks = Duck.all
@@ -18,6 +18,7 @@ class DucksController < ApplicationController
       redirect_to duck_path(duck)
     else
       render :new, status: :unprocessable_entity
+    end
   end
 
   def destroy
