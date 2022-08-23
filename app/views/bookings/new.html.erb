@@ -1,6 +1,15 @@
-<h1>Book your duck</h1>
-<%= simple_form_for @booking do |f| %>
-  <%= f.input :start_date %>
-  <%= f.input :end_date %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Quac your duck</h3>
+        <%= simple_form_for @booking do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.input :comment %>
+          <%= f.submit class: 'btn btn-outline-warning' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>`
