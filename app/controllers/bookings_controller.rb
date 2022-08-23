@@ -23,9 +23,19 @@ class BookingsController < ApplicationController
     redirect_to duck_path(@booking.duck), status: :see_other
   end
 
+  def edit
+    @duck = Duck.find(params[:id])
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(booking_params)
+    redirect_to duck_path(@booking.duck)
+  end
+  
   private
 
   def booking_params
     params.require(:booking).permit(:start_date, :end_date, :status)
-  end
 end
