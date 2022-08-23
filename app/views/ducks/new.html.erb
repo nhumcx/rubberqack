@@ -1,7 +1,15 @@
-<h1>Upload your duck</h1>
-<%= simple_form_for @duck do |f| %>
-  <%= f.input :name %>
-  <%= f.input :category%>
-  <%= f.input :description%>
-  <%= f.button :submit %>
-<% end %>
+<div class="container py-5">
+  <div class="row">
+    <div class="col-12 col-md-6 offset-lg-3">
+      <div class="bg-white rounded p-3 shadow">
+        <h3>Upload your duck</h3>
+        <%= simple_form_for @duck do |f| %>
+          <%= f.input :name, placeholder: 'Filippo' %>
+          <%= f.input :category%>
+          <%= f.input :description%>
+          <%= f.submit class: 'btn btn-flat' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
