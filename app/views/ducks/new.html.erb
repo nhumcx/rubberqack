@@ -6,7 +6,7 @@
         <%= simple_form_for @duck do |f| %>
           <%= f.input :name, placeholder: 'Filippo' %>
           <%= f.input :category, placeholder: 'Coding' %>
-          <%= f.input :description%>
+          <%= f.input :description, placeholder: 'Great listener and always there for you! ❤️'%>
           <%= f.input :photo, as: :file %>
           <%= f.submit class: 'btn btn-outline-warning' %>
         <% end %>
