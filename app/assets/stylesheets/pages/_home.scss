@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  margin-top: 40px;
 }
 
 // .banner h1 {
@@ -14,9 +15,8 @@
 // }
 
 .banner p {
-  font-size: 20px;
+  font-size: 25px;
   color: white;
-  opacity: .7;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
 }
 
@@ -32,7 +32,8 @@
 
 // typewriter effect
 .typewriter {
-  font-size: 32px;
+  font-size: 38px;
+  text-shadow: 0 0 5px #000;
   font-weight: bold;
   color: #F3DB74 ;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
