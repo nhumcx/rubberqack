@@ -1,1 +1,15 @@
-<h1>Bookings index</h1>
+
+<h1>My Qacks</h1> </div>
+
+<div class="card-product">
+  <% @bookings.each do |booking| %>
+    <%= link_to duck_path(booking) do %>
+      <div class="card-product-infos" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path duck.photo.key, width: 200, crop: :fill %>)">
+        <h4><%=duck.name%><h4>
+    <p>This wonderful rubber duck is made of natural latex. Therefore, it is not only not annoying with its silence, but also tactilely pleasing.</p>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "+", new_duck_path, class: 'btn btn-outline-warning'%>
