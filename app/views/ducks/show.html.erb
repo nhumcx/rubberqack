@@ -4,7 +4,7 @@
     <div class="col-12 col-md-6 offset-lg-3">
       <div class="bg-white rounded p-3 shadow text-center">
         <h1><%= @duck.name %></h1>
-        <%= cl_image_tag @duck.photo.key, crop: :fill %>
+        <%= cl_image_tag @duck.photo.key, width: 200, crop: :fill %>
         <p class="text-muted">Category:</p>
         <h3><%= @duck.category %></h3>
         <p class="text-muted">Description:</p>

@@ -24,7 +24,7 @@ class DucksController < ApplicationController
 
   def destroy
     @duck.destroy
-    redirect_to ducks_path, status: :see_other
+    redirect_to duck_path(duck), status: :see_other
   end
 
   private
