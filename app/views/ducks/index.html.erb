@@ -1,1 +1,14 @@
-<h1>Ducks Index</h1>
+<div class="container py-2"><h1>Ducks</h1> </div>
+
+<div class="cards">
+  <% @ducks.each do |duck| %>
+  <%= link_to duck_path(duck) do %>
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path duck.photo.key, width: 200, crop: :fill %>)">
+      <h4><%=duck.name%><h4>
+
+    </div>
+    <% end %>
+  <% end %>
+</div>
+
+<%= link_to "+", new_duck_path, class: 'btn btn-outline-warning'%>
