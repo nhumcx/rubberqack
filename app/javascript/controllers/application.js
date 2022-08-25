@@ -1,5 +1,4 @@
 import { Application } from "@hotwired/stimulus"
-// import { initFlatpickr } from "../plugins/flatpickr";
 
 const application = Application.start()
 
@@ -9,5 +8,3 @@ window.Stimulus   = application
 
 export { application }
 
-
-// initFlatpickr();
