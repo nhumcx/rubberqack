@@ -1,6 +1,6 @@
 
 <div class='container'>
- <h1>My Quaks:</h1>
+ <h1>My Quaks</h1>
   <div class="card-product">
     <% @bookings.each do |booking| %>
     <div class="col-xs-12 col-md-4">
@@ -9,8 +9,8 @@
           <div>
             <h3><%=booking.status %>:</h3>
           </div>
-       </div>
+        <% end %>
       </div>
-       <% end %>
+    </div>
   </div>
 </div>
