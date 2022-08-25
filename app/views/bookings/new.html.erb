@@ -4,9 +4,9 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Quack your duck</h3>
         <h1><%= @duck.name %></h1>
-        <%= simple_form_for @booking do |f| %>
-          <%= f.input :start_date %>
-          <%= f.input :end_date %>
+        <%= simple_form_for [@duck, @booking] do |f| %>
+          <%= f.input :start_date, as: :string, type: :text%>
+          <%= f.input :end_date, as: :string, type: :text %>
           <%= f.input :comment %>
           <%= f.submit class: 'btn btn-outline-warning' %>
         <% end %>
