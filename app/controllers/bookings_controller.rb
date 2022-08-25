@@ -40,6 +40,18 @@ class BookingsController < ApplicationController
     redirect_to duck_path(@booking.duck)
   end
 
+  def confirm_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = "Qaking confirmed"
+    @booking.save!
+  end
+
+  def reject_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = "Qaking rejected"
+    @booking.save!
+  end
+
   private
 
   def booking_params
