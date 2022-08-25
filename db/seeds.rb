@@ -7,8 +7,8 @@
 #   Character.create(name: "Luke", movie: movies.first)
 require "open-uri"
 
-Duck.delete_all
 User.delete_all
+Duck.delete_all
 
 User.create!(
   email: "nhumo@test.com",
