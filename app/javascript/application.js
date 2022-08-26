@@ -8,16 +8,24 @@ initFlatpickr();
 
 const audio = new Audio("https://res.cloudinary.com/dbgvo56a1/video/upload/v1661345735/Quack_Sound_Effect_wniepn.mp3");
 // const bruhAudio = new Audio("https://res.cloudinary.com/dbgvo56a1/video/upload/v1661505053/bruh_py28qq.mp3");
-// const rickAudio = new Audio("https://res.cloudinary.com/dbgvo56a1/video/upload/v1661505067/quack.rick_vauul7.mp3");
+const rickAudio = new Audio("https://res.cloudinary.com/dbgvo56a1/video/upload/v1661505067/quack.rick_vauul7.mp3");
+const flutter = new Audio("https://res.cloudinary.com/dbgvo56a1/video/upload/v1661505006/wings_sound_pfuphm.mp3");
 const button = document.getElementById("button");
 const duckflakes = document.querySelectorAll(".snowflake");
 // const bruh = document.getElementById("bruh-button");
-// const avatarRick = document.getElementsByClassName("avatar");
+const avatarRick = document.getElementById("quackatar");
+// const flutterDuck = document.getElementById("newduck");
 
-  // avatarRick.addEventListener("click", () => {
-
-  //   bruhAudio.play();
+  // flutterDuck.addEventListener("click", () => {
+  //   console.log("flutter");
+  //   flutter.play();
   // });
+
+
+  avatarRick.addEventListener("click", () => {
+    console.log("rick");
+    rickAudio.play();
+  });
 
 
   // bruh.addEventListener("click", () => {
@@ -27,6 +35,7 @@ const duckflakes = document.querySelectorAll(".snowflake");
 
 
   button.addEventListener("click", () => {
+    console.log("click");
     audio.play();
   });
 
