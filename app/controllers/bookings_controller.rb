@@ -48,12 +48,14 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.status = "Qaking confirmed"
     @booking.save!
+    redirect_to my_ducks_path
   end
 
   def reject_booking
     @booking = Booking.find(params[:id])
     @booking.status = "Qaking rejected"
     @booking.save!
+    redirect_to my_ducks_path
   end
 
   private
