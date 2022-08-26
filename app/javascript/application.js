@@ -12,7 +12,7 @@ const rickAudio = new Audio("https://res.cloudinary.com/dbgvo56a1/video/upload/v
 const flutter = new Audio("https://res.cloudinary.com/dbgvo56a1/video/upload/v1661505006/wings_sound_pfuphm.mp3");
 const button = document.getElementById("button");
 const duckflakes = document.querySelectorAll(".snowflake");
-// const bruh = document.getElementById("bruh-button");
+// const bruh = document.getElementById("bruh");
 const avatarRick = document.getElementById("quackatar");
 // const flutterDuck = document.getElementById("newduck");
 
@@ -21,29 +21,33 @@ const avatarRick = document.getElementById("quackatar");
   //   flutter.play();
   // });
 
+  if (avatarRick){
+    avatarRick.addEventListener("click", () => {
+      console.log("rick");
+      rickAudio.play();
+    });
+  };
 
-  avatarRick.addEventListener("click", () => {
-    console.log("rick");
-    rickAudio.play();
-  });
+  // if (bruh){
+  //   bruh.addEventListener("click", () => {
+  //     console.log("bruh");
+  //     bruhAudio.play();
+  //   });
+  // };
+
+  if(button){
+    button.addEventListener("click", () => {
+      console.log("click");
+      audio.play();
+    });
+  };
 
 
-  // bruh.addEventListener("click", () => {
-  //   console.log("bruh");
-  //   bruhAudio.play();
-  // });
-
-
-  button.addEventListener("click", () => {
-    console.log("click");
-    audio.play();
-  });
-
-
-
-duckflakes.forEach(duck => {
-  duck.addEventListener("mouseover", () => {
-    console.log('quack')
-    audio.play();
-  });
-});
+  if(duckflakes){
+    duckflakes.forEach(duck => {
+      duck.addEventListener("mouseover", () => {
+        console.log('quack')
+        audio.play();
+      });
+    });
+  }
