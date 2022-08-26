@@ -1,7 +1,30 @@
 // Import page-specific CSS files here.
 @import "home";
 
+.confirm {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-size: 18px;
+}
+
+.reject {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+  font-size: 18px;
+}
+
+
+// .cards-container {
+//   position: relative;
+// }
+
 .h4 {
+  text-decoration: none;
+}
+
+.link {
   text-decoration: none;
 }
 
@@ -13,6 +36,7 @@
 }
 
 .card-category {
+  position: relative;
   background-size: cover;
   background-position: center;
   height: 180px;
