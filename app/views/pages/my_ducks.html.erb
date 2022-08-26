@@ -8,7 +8,14 @@
         <h4><%=my_duck.name%><h4>
         <% my_duck.bookings.each do |duck|%>
           <% if duck.status == "reqaked"%>
-            <div class="cards-req">"Somebody quaked you"</div>
+            <div class="cards-container">
+              <div class ="confirm">
+                <%= link_to image_tag("https://res.cloudinary.com/dbgvo56a1/image/upload/v1661508650/confirm_iumyel.png", border: 0, width: 100), my_ducks_path, data: { turbo_method: :confirm_booking, turbo_confirm: "Are you sure you want to qack this duck?" }%>
+              </div>
+              <div class ="reject">
+                <%= link_to image_tag("https://res.cloudinary.com/dbgvo56a1/image/upload/v1661508650/reject_btyivg.png", border: 0, width: 100), my_ducks_path, data: { turbo_method: :reject_booking, turbo_confirm: "Are you sure you want to reject the qacking this duck?" }%>
+              </div>
+            </div>
           <% else %>
             <div class="cards-norm"></div>
           <% end %>
