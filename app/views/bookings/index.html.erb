@@ -1,1 +1,16 @@
-<h1>Bookings index</h1>
+
+<div class='container'>
+ <h1>My Quaks</h1>
+  <div class="card-product">
+    <% @bookings.each do |booking| %>
+    <div class="col-xs-12 col-md-4">
+      <div class="card-product-infos" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path booking.duck.photo.key, width: 200, crop: :fill %>)">
+        <%= link_to "", duck_path(booking.duck) %>
+          <div>
+            <h3><%=booking.status %>:</h3>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>

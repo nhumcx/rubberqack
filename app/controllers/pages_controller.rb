@@ -5,5 +5,6 @@ class PagesController < ApplicationController
 
   def my_ducks
     @my_ducks = current_user.ducks
+    # @booked = Bookings.where(status: "requaked")
   end
 end

@@ -1,0 +1,20 @@
+<div class="container py-2"><h2>All my duckies</h2> </div>
+
+<div class="cards">
+
+  <% @my_ducks.each do |my_duck| %>
+    <%= link_to duck_path(my_duck) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(140, 204, 224, 0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path my_duck.photo.key, crop: :fill %>)">
+        <h4><%=my_duck.name%><h4>
+        <% my_duck.bookings.each do |duck|%>
+          <% if duck.status == "reqaked"%>
+            <div class="cards-req">"Somebody quaked you"</div>
+          <% else %>
+            <div class="cards-norm"></div>
+          <% end %>
+        <% end %>
+      </div>
+    <% end %>
+  <% end %>
+  </div>
+</div>

@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = current_user.bookings
     # @ducks = Duck.all
   end
 
@@ -38,6 +38,18 @@ class BookingsController < ApplicationController
     @booking = Booking.find(params[:id])
     @booking.update(booking_params)
     redirect_to duck_path(@booking.duck)
+  end
+
+  def confirm_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = "Qaking confirmed"
+    @booking.save!
+  end
+
+  def reject_booking
+    @booking = Booking.find(params[:id])
+    @booking.status = "Qaking rejected"
+    @booking.save!
   end
 
   private
