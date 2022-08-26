@@ -19,7 +19,7 @@ class BookingsController < ApplicationController
     @booking.duck = @duck
     @booking.user = current_user
     if @booking.save!
-      redirect_to duck_path(@booking.duck)
+      redirect_to duck_path(@booking.duck), notice: "Successfully booked #{@duck.name}"
     else
       render :new, status: :unprocessable_entity
     end
